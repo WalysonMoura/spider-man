@@ -11,7 +11,7 @@ export const Font = {
 export const fontWeight = {
     title: 400,
     subtitle: 400,
-    describre: 400,
+    describre: 300,
     menu: 400,
 
     footer: {
@@ -21,9 +21,9 @@ export const fontWeight = {
 }
 
 export const fontSize = {
-    title: '340px',
+    title: '15rem',
     subtitle: '50px',
-    describre: '30px',
+    describre: '25px',
     menu: '24.42px',
     footer: {
         title: '37px',

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Footer  from "../components/Footer";
 import * as Style from "../styles/style";
 
 export default function Home() {
@@ -11,38 +12,56 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Style.Principal>
-        <Image
-          width={500}
-          height={500}
-          src="/predios.svg"
-          alt="img"
-          responsive
-        />
-        <Image width={500} height={500} src="/teia.svg" alt="img" responsive />
-        <Image width={500} height={500} src="/teia2.svg" alt="img" responsive />
+        <h1>NOW HOME</h1>
+        <div className="img1">
+          <Image width={150} height={150} src="/teia.svg" alt="img" />
+        </div>
+        <div className="img2">
+          <Image width={150} height={150} src="/teia2.svg" alt="img" />
+        </div>
+        <div className="img3">
+          <Image width={500} height={500} src="/spider.svg" alt="img" />
+        </div>
+
+        <h1></h1>
       </Style.Principal>
       <Style.Historia>
-        <div>
-          <Image width={500} height={500} src="/hq.png" alt="img" />
-          <p>
-            Há exatos 50 anos, o Homem-Aranha (Spider-Man), personagem da Marvel
-            Comics, apareceu pela primeira vez. Em agosto de 1962, na décima
-            quinta (e última) edição da revista Amazing Fantasy, surgia o
-            super-herói aracnídeo criado por três monstros sagrados dos
-            quadrinhos: Stan Lee, Jack Kirby e Steve Ditko.
-          </p>
-        </div>
-        <div>
-          <Image width={500} height={500} src="/stan.png" alt="img" />
-          <p>
-            Stan Lee foi o criador do conceito e roteirista das primeiras
-            histórias do Homem-Aranha. Ao seu lado estava Jack Kirby, que
-            participou do desenvolvimento inicial do Escalador de Paredes, mas
-            nunca chegou a ser desenhista regular do herói, papel este que coube
-            a Steve Ditko, o principal desenhista de tramas de mistério e
-            suspense da Marvel e corroteirista de várias das histórias de Lee
-            com o Homem-Aranha.
-          </p>
+        <div className="content">
+          <div className="hq">
+            <Image
+              width={500}
+              height={400}
+              src="/hq.png"
+              alt="img"
+              responsive
+            />
+
+            <p>
+              Há exatos 50 anos, o Homem-Aranha (Spider-Man), personagem da
+              Marvel Comics, apareceu pela primeira vez. Em agosto de 1962, na
+              décima quinta (e última) edição da revista Amazing Fantasy, surgia
+              o super-herói aracnídeo criado por três monstros sagrados dos
+              quadrinhos: Stan Lee, Jack Kirby e Steve Ditko.
+            </p>
+          </div>
+          <div className="stan">
+            <p>
+              Stan Lee foi o criador do conceito e roteirista das primeiras
+              histórias do Homem-Aranha. Ao seu lado estava Jack Kirby, que
+              participou do desenvolvimento inicial do Escalador de Paredes, mas
+              nunca chegou a ser desenhista regular do herói, papel este que
+              coube a Steve Ditko, o principal desenhista de tramas de mistério
+              e suspense da Marvel e corroteirista de várias das histórias de
+              Lee com o Homem-Aranha.
+            </p>
+            <Image
+              width={500}
+              height={400}
+              src="/stan.png"
+              alt="img"
+              responsive
+            />
+          </div>
         </div>
       </Style.Historia>
       <Style.Filmes>
@@ -53,6 +72,7 @@ export default function Home() {
           eligendi ipsum. Praesentium.
         </p>
       </Style.Filmes>
+      <Footer/>
     </>
   );
 }
