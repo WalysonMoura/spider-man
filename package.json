@@ -10,14 +10,18 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
+    "@next/font": "^13.0.5",
     "animate.css": "^4.1.1",
-    "next": "^12.3.1",
+    "next": "^13.0.5",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.1.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0",
+    "react-icons": "^4.7.1",
     "react-parallax-tilt": "^1.7.68",
-    "styled-components": "^5.3.6"
+    "react-sticker": "^1.0.4",
+    "sticker": "^0.0.1",
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "eslint": "8.26.0",

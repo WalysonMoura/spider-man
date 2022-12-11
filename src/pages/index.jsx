@@ -1,9 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
-import Footer  from "../components/Footer";
+
+import { Fade, Bounce, Slide  } from "react-awesome-reveal";
+
+//components
+import { SwiperSlide } from "swiper/react";
+import Footer from "../components/Footer";
+import Slider from "../components/Slider";
+
 import * as Style from "../styles/style";
 
 export default function Home() {
+  const settings = {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+  };
+
   return (
     <>
       <Head>
@@ -12,22 +25,44 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Style.Principal>
-        <h1>NOW HOME</h1>
+      
+      <h1>NOW HOME</h1>
+      
         <div className="img1">
+        <Slide direction="down" delay={200}>
           <Image width={150} height={150} src="/teia.svg" alt="img" />
+          </Slide>
         </div>
         <div className="img2">
+        <Slide direction="down" delay={500}>
           <Image width={150} height={150} src="/teia2.svg" alt="img" />
+          </Slide>
         </div>
         <div className="img3">
-          <Image width={500} height={500} src="/spider.svg" alt="img" />
+        <Slide direction="down">
+          <Image
+            width={450}
+            height={450}
+            src="/spider.svg"
+            alt="img"
+            className="spiderImage1"
+          />
+           </Slide>
+           <Slide direction="right" delay={200}>
+          <Image
+            width={300}
+            height={300}
+            src="/spider-mobile.png"
+            alt="img"
+            className="spiderImage2"
+          />
+          </Slide>
         </div>
-
-        <h1></h1>
       </Style.Principal>
       <Style.Historia>
         <div className="content">
           <div className="hq">
+          <Fade  direction="left" cascade>
             <Image
               width={500}
               height={400}
@@ -35,7 +70,6 @@ export default function Home() {
               alt="img"
               responsive
             />
-
             <p>
               Há exatos 50 anos, o Homem-Aranha (Spider-Man), personagem da
               Marvel Comics, apareceu pela primeira vez. Em agosto de 1962, na
@@ -43,8 +77,10 @@ export default function Home() {
               o super-herói aracnídeo criado por três monstros sagrados dos
               quadrinhos: Stan Lee, Jack Kirby e Steve Ditko.
             </p>
+            </Fade>
           </div>
           <div className="stan">
+          <Fade direction="right" cascade>
             <p>
               Stan Lee foi o criador do conceito e roteirista das primeiras
               histórias do Homem-Aranha. Ao seu lado estava Jack Kirby, que
@@ -60,19 +96,46 @@ export default function Home() {
               src="/stan.png"
               alt="img"
               responsive
+              style={{}}
             />
+            </Fade >
           </div>
         </div>
       </Style.Historia>
       <Style.Filmes>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus ea repellat voluptates neque rem magni quis veritatis
-          eos enim reiciendis temporibus dolorum, hic illum vel nulla optio
-          eligendi ipsum. Praesentium.
-        </p>
+        <Slider settings={settings}>
+          <SwiperSlide>
+            <Image
+              width={300}
+              height={400}
+              src="/filme1.png"
+              alt="img"
+              responsive
+              style={{ borderRadius: "1rem" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={300}
+              height={400}
+              src="/filme2.png"
+              alt="img"
+              responsive
+              style={{ borderRadius: "1rem" }}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={300}
+              height={400}
+              src="/filme3.png"
+              alt="img"
+              style={{ borderRadius: "1rem" }}
+            />
+          </SwiperSlide>
+        </Slider>
       </Style.Filmes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

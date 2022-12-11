@@ -1,12 +1,11 @@
-import { createGlobalStyle } from "styled-components"
-
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap");
     *,*::before,*::after {
 				margin: 0;
 				padding: 0;
-        box-sizing: border-box;
+        		box-sizing: border-box;
         
 }
 html, body, div, span, applet, object, iframe,
@@ -32,9 +31,10 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
+ }
 body {
 	line-height: 1;
+	font-family: 'Outfit',sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -62,17 +62,15 @@ img {
 html {
   scroll-behavior: smooth;
 }
-body{
-	font-family: 'Outfit';
-}
 
-`
+
+`;
 
 export const theme = {
-    light: {
-        primary: "#0070f3",
-    },
-    dark: {
-        primary: "#0070f3",
-    }
-}
+  light: {
+    primary: "#0070f3",
+  },
+  dark: {
+    primary: "#0070f3",
+  },
+};

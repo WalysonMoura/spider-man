@@ -14,11 +14,10 @@ export const Principal = styled.section`
 
   background-position: bottom center;
   background-repeat: no-repeat;
- 
+
   background-size: contain;
   display: grid;
   place-items: center;
-
 
   h1,
   .img1,
@@ -33,7 +32,8 @@ export const Principal = styled.section`
   .img2 {
     right: 0;
   }
-  .img3 {
+  .spiderImage2 {
+    display: none;
   }
 
   h1 {
@@ -56,6 +56,16 @@ export const Principal = styled.section`
       font-size: 6.5rem;
       top: 7rem;
     }
+    .spiderImage1 {
+      display: none;
+    }
+    .spiderImage2 {
+      display: block;
+    }
+    .img3 {
+      top: 4rem;
+     right: 0;
+    }
   }
 `;
 export const Historia = styled.section`
@@ -66,7 +76,7 @@ export const Historia = styled.section`
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 8rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,11 +99,9 @@ export const Historia = styled.section`
 
     .hq {
       grid-template-columns: 1fr 1.5fr;
-      
     }
     .stan {
       grid-template-columns: 1.5fr 1fr;
-    
     }
   }
 
@@ -103,10 +111,9 @@ export const Historia = styled.section`
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        p{
-            font-size: 1.25rem;
+        p {
+          font-size: 1.25rem;
         }
-      
       }
       .stan {
         flex-direction: column-reverse;
@@ -117,10 +124,9 @@ export const Historia = styled.section`
 
 export const Filmes = styled.section`
   width: 100%;
-  position: absolute;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
   background-color: ${Colors.branco};
-  
-border-radius: 12% 10% 0% 0% / 13% 10% 0% 0% ;
-
 `;
